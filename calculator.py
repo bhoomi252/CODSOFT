@@ -1,4 +1,4 @@
-print ("Enter 2 number to perform calculation: ");
+print ("Enter 2 number to perform calculation: ")
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
 calc = input("Enter the operator: ")

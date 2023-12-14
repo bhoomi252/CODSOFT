@@ -27,9 +27,10 @@ def clr():
 root = tk.Tk()
 root.geometry('300x275')
 root.title('Calculator')
+root.configure(bg='pink')
 
-result = tk.Text(root,height=2,width=16,font=("Arial",24))
-result.grid(columnspan=5)
+result = tk.Text(root,height=2,width=18,font=("Arial",22))
+result.grid(columnspan=5,padx=5,pady=5)
 
 b1 = tk.Button(root,text='1', command=lambda: addc(1),width=5,font=('Arial',14))
 b1.grid(row=4,column=1)
@@ -79,4 +80,4 @@ be.grid(row=5,column=3)
 bclr = tk.Button(root,text='C', command= clr,width=5,font=('Arial',14))
 bclr.grid(row=5,column=1)
 
-root.mainloop()
+root.mainloop() 

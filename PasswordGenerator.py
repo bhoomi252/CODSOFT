@@ -6,8 +6,9 @@ pw = Tk()
 pw.geometry("600x400")
 pw.resizable(0,0)
 pw.title("PASSWORD GENERATOR")
+pw.configure(bg='sky blue')
 
-label=Label(pw, text="Password Generator", fg = "#1E90FF" ,font=("Arial", 22, "bold", "underline"))
+label=Label(pw, text="Password Generator", fg = "blue" ,bg='sky blue',font=("Arial", 22, "bold", "underline"))
 label.grid(column=0, row=0, padx=150, pady=10)
 
 def generate():
@@ -20,7 +21,7 @@ def generate():
               '!','@','#','$','%','^','&','*']
         
         password= ""
-        length_input = int(get_l.get())  # Changed variable name from len to length_input
+        length_input = int(get_l.get()) 
         get_pw.delete(0, END)
         
         if length_input <= 0:
@@ -62,13 +63,13 @@ gen_pw.grid(column=0, row=4, sticky=W)
 get_pw=Entry(frame)
 get_pw.grid(column=1, row=4, padx=10,pady=10)
 
-gen_b=Button(frame, text="Generate", font=("Arial",12,"bold"),fg="#111111",bg="sky blue",command=generate)
+gen_b=Button(frame, text="Generate", width=10,font=("Arial",12,"bold"),fg="#111111",bg="sky blue",command=generate)
 gen_b.grid(column=1, row=5, padx=10, pady= 10)
 
-accb = Button(frame, text="Accept",font=("Arial",12,"bold"), fg="#111111",bg="sky blue", command=accept)
+accb = Button(frame, text="Accept",width=10,font=("Arial",12,"bold"), fg="#111111",bg="sky blue", command=accept)
 accb.grid(column=1, row=6, padx=10, pady=10)
 
-resetb = Button(frame, text="  Reset  ", font=("Arial", 12, "bold"), fg="#111111",bg="sky blue",command=reset)
+resetb = Button(frame, text="  Reset  ", width=10,font=("Arial", 12, "bold"), fg="#111111",bg="sky blue",command=reset)
 resetb.grid(column=1, row=7,padx=10, pady=10) 
 
-pw.mainloop()
+pw.mainloop() 
